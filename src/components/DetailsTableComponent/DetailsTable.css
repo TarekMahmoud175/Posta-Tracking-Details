@@ -1,0 +1,28 @@
+.row {
+  margin-top: 20px;
+}
+table {
+  width: 100%;
+  border: 1px solid #d8d7d7;
+}
+tr {
+  border: 1px solid #ebe5e5;
+  border-radius: 5px;
+}
+.tableHead {
+  background-color: #f0ebeb;
+  height: 50px;
+}
+th {
+  color: #bbb6b6;
+  padding-right: 10px;
+  font-family: "cairoBold";
+}
+.item{
+    height: 40px;
+}
+td{
+    padding-right: 10px;
+    text-align: start;
+    font-family:"carioRegular";
+}

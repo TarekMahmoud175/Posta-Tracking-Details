@@ -1,0 +1,20 @@
+ @font-face {
+    font-family: "CarioBold";
+    src: url("./ArbFONTS-Cairo-Bold-1.ttf") format("truetype");
+ }
+ 
+ @font-face {
+    font-family: "CairoLight";
+    src: url("./ArbFONTS-Cairo-Light-1.ttf") format("truetype");
+ }
+ 
+ @font-face {
+    font-family: "CairoRegular";
+    src: url("./ArbFONTS-Cairo-Regular-1.ttf") format("truetype");
+ }
+ 
+ @font-face {
+    font-family: "CairoSemiBold";
+    src: url("./ArbFONTS-Cairo-SemiBold-1.ttf") format("truetype");
+ }
+ 

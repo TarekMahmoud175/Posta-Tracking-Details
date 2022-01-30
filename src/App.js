@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import ProgressBarComponent from "./components/ProgressBarComponent/ProgressBarComponent";
+import DetailsTable from "./components/DetailsTableComponent/DetailsTable";
+import AddressComponent from "./components/AddressComponent/AddressComponent";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <ProgressBarComponent />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-7">
+            <DetailsTable />
+          </div>
+          <div className="col-md-4 offset-md-1">
+            <AddressComponent />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
