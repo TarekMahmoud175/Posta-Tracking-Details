@@ -1,16 +1,31 @@
 .App {
   margin-top: 20px;
 }
-.row{
+.container{
+  padding: 10px 10px;
+}
+.row {
   direction: rtl;
 }
-div.col-md-7,div.col-md-4{
+div.col-md-7,
+div.col-md-4 {
   padding: 0px;
 }
-h4{
+h4 {
   font-family: "cairoBold";
   font-size: 18px;
 }
-.bottomRow{
+.bottomRow {
   justify-content: flex-end;
+}
+.btnFocused {
+  background-color: #0000ff !important ;
+  color: #fff !important;
+}
+.btnNotFocused {
+  background-color: "#fff";
+  color: "#000";
+}
+.btn{
+  margin-top: 10px !important;
 }

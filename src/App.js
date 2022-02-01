@@ -5,19 +5,21 @@ import DetailsTable from "./components/DetailsTableComponent/DetailsTable";
 import AddressComponent from "./components/AddressComponent/AddressComponent";
 import { TrackingService } from "./apis/Services/TrackingServices";
 import { useEffect, useState } from "react";
+import { Button } from "antd";
 
 function App() {
   // 6636234, 7234258, 7234258,1094442
   const orders = [
-    { numer: "6636234", text: "6636234 الطلب" },
-    { numer: "7234258", text: "7234258 الطلب" },
-    { numer: "1094442", text: "1094442 الطلب" },
+    { number: "6636234", text: "الطلب   6636234" },
+    { number: "7234258", text: "الطلب 7234258 " },
+    { number: "1094442", text: "الطلب 1094442" },
   ];
   const [trackingRes, setTrackingRes] = useState({});
   const [trackingNumber, settrackingNumber] = useState(null);
-  const getTrackingData = () => {
+
+  const getTrackingData = (trackNum) => {
     setTrackingRes({});
-    TrackingService.getTrackingDetails("1094442")
+    TrackingService.getTrackingDetails(trackNum)
       .then((res) => {
         console.log("ressss =======>  ", res);
         setTrackingRes(res);
@@ -28,14 +30,30 @@ function App() {
   };
 
   useEffect(() => {
-    getTrackingData();
+    if (trackingNumber) {
+      getTrackingData(trackingNumber);
+    }
   }, [trackingNumber]);
 
   return (
     <div className="App">
       <div className="container">
         <div className="row">
-          
+          {orders.map((item) => {
+            return (
+              <Button
+                key={item.number}
+                className={
+                  item.number == trackingNumber ? "btn btnFocused" : "btn btnNotFocused"
+                }
+                onClick={() => {
+                  settrackingNumber(item.number);
+                }}
+              >
+                {item.text}
+              </Button>
+            );
+          })}
         </div>
         {trackingNumber && trackingRes ? (
           <>
