@@ -1,3 +1,4 @@
+import moment from "moment";
 import React from "react";
 import "./DetailsTable.css";
 
@@ -28,11 +29,12 @@ const TableArr = [
   },
 ];
 
-const DetailsTable = () => {
+const DetailsTable = (props) => {
+  console.log(props?.tableData?.length);
   return (
     <>
       <div className="row">
-      <h4>تفاصيل الشحنة</h4>
+        <h4>تفاصيل الشحنة</h4>
         <div className="col-md-12">
           <table>
             <tr className="tableHead">
@@ -41,14 +43,18 @@ const DetailsTable = () => {
               <th>الوقت</th>
               <th>التفاصيل</th>
             </tr>
-            {TableArr.map((item) => (
-              <tr className="item">
-                <td>{item.branch}</td>
-                <td>{item.date}</td>
-                <td>{item.time}</td>
-                <td>{item.details}</td>
-              </tr>
-            ))}
+            {props?.tableData?.length > 0 &&
+              props?.tableData.map((item) => {
+                // console.log(item),
+                return  (
+                    <tr className="item">
+                      <td>{item?.hub}</td>
+                      <td>{moment(item?.timestamp).format("DD-MM-YYYY")}</td>
+                      <td>{moment(item?.timestamp).format("hh:mm a")}</td>
+                      <td>{item?.state}</td>
+                    </tr>
+                  );
+              })}
           </table>
         </div>
       </div>

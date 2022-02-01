@@ -1,4 +1,4 @@
-import DomainUrl from "../Domains";
+import DomainUrl from "../Domain";
 
 export const TrackingEndPoints = {
   track: {

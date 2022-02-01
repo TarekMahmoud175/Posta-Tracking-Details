@@ -1,44 +1,64 @@
-.mainRow{
-    margin-top: 15%;
-    text-align: center;
-    border: 1px solid #d9d2d2;
-    padding-top: 15px;
-    padding-bottom: 15px;
+.mainRow {
+  margin-top: 15%;
+  text-align: center;
+  border: 1px solid #d9d2d2;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-.TopRow::after{
-    width: 100%;
-    height: 1px;
-    background-color: #d9d2d2;
-    content: " ";
+.TopRow::after {
+  width: 100%;
+  height: 1px;
+  background-color: #d9d2d2;
+  content: " ";
 }
 
-.key{
-    font-family: "cairoRegular";
-    font-size: 18px;
-    color:#808080;
+.key {
+  font-family: "cairoRegular";
+  font-size: 18px;
+  color: #808080;
 }
-.value{
-    font-family: "cairoBold";
-    font-size: 22px;
-    color: #000;
+.value {
+  font-family: "cairoBold";
+  font-size: 22px;
+  color: #000;
+}
+.dateHourRow{
+  display: flex;
+  flex-direction: row;
 }
 
-.barRow{
-    padding: 50px 30px 50px 30px;
-    direction: rtl;
+.val2{
+  display: inline;
+  margin-right: 5px;
 }
 
-.steps-content {
-    min-height: 200px;
-    margin-top: 16px;
-    padding-top: 80px;
-    text-align: center;
-    background-color: #fafafa;
-    border: 1px dashed #e9e9e9;
-    border-radius: 2px;
-  }
-  
-  .steps-action {
-    margin-top: 24px;
-  }
+.barRow {
+  padding: 50px 30px 50px 30px;
+  direction: rtl;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.ant-steps-item-tail::after {
+  right: 100%;
+  margin-right: 25%;
+}
+.ant-steps-item-content {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.ant-steps-icon>img {
+    position: relative;
+    float: left;
+    /* width: 100%; */
+    /* height: 100%; */
+    /* border-radius: 100px; */
+    /* transition: all 0.3s; */
+    margin-top: -12px;
+    margin-left: -11px
+}

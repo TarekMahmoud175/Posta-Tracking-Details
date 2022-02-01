@@ -9,3 +9,6 @@ body {
 
 }
 
+.ant-steps-item-title::after{
+  right: 100%;
+}
